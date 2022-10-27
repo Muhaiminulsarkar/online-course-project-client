@@ -1,0 +1,16 @@
+.img-resize{
+    height:80vh;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.underline{
+    text-decoration: none;
+}
+
+.circleimage{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
