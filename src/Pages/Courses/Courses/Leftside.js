@@ -11,11 +11,11 @@ const Leftside = () => {
 
   return (
     <div>
-      <h4>All Category: {categories.length}</h4>
+      <h4 className=" fw-bold text-success fs-3">Total Course: {categories.length}</h4>
       <div>
         {categories.map((category) => (
           <p key={category.id}>
-            <Link className="underline-hide" to={`/courses/${category.id}`}>{category.name}</Link>
+            <Link className="text-decoration-none fw-bold text-black" to={`/courses/${category.id}`}>{category.name}</Link>
           </p>
         ))}
       </div>
