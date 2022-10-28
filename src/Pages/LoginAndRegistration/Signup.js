@@ -79,33 +79,33 @@ const Signup = () => {
 
 
     return (
-        <div className='container w-25 mt-5 bg-success px-4 py-2'>
+        <div className='container w-25 mt-5 bg-success px-4 py-4 rounded'>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Your Name</Form.Label>
+                    <Form.Label className="text-light fw-bold">Your Name</Form.Label>
                     <Form.Control name="name" type="text" placeholder="Your Name" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Photo URL</Form.Label>
+                    <Form.Label className="text-light fw-bold">Photo URL</Form.Label>
                     <Form.Control name="photoURL" type="text" placeholder="Phot URL" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label className="text-light fw-bold">Email address</Form.Label>
                     <Form.Control name="email" type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label className="text-light fw-bold">Password</Form.Label>
                     <Form.Control name="password" type="password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check
+                    <Form.Check className="text-light fw-bold"
                         type="checkbox"
                         onClick={handleAccepted}
-                        label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
+                        label={<>Accept <Link className="text-black fw-bold" to="/terms">Terms and conditions</Link></>} />
                 </Form.Group>
-                <Button variant="primary" type="submit" disabled={!accepted}>
+                <Button className="text-black fw-bold" variant="warning" type="submit" disabled={!accepted}>
                     Register
                 </Button>
                 <Form.Text className="text-danger">
