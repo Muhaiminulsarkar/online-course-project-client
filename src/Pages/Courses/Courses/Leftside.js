@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Leftside = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    fetch("https://course-hub-platform-server.vercel.app/courses-categories")
+    fetch("http://localhost:5000/courses-categories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);

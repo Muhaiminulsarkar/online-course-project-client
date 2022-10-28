@@ -26,7 +26,7 @@ const Login = () => {
         form.reset();
         setError("");
         toast.success("Log in successfully");
-        navigate(from, {replace: true});
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error(error);
@@ -58,7 +58,7 @@ const Login = () => {
       </Form>
     </div>
   );
-  
+
 };
 
 export default Login;

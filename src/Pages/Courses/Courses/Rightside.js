@@ -6,7 +6,7 @@ const Rightside = () => {
   const [rightsides, setRightside] = useState([]);
 
   useEffect(() => {
-    fetch("https://course-hub-platform-server.vercel.app/course-details")
+    fetch("http://localhost:5000/course-details")
       .then((res) => res.json())
       .then((data) => setRightside(data));
   }, []);
