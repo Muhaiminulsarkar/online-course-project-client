@@ -8,10 +8,11 @@ import Image from 'react-bootstrap/Image'
 import Button from "react-bootstrap/Button";
 import "./Header.css";
 import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-
+  const [isDarkMode, setIsDarkMode] = useState(() => false);
   const handleLogOut = () => {
     logOut()
       .then(() => { })
@@ -42,7 +43,12 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link className="text-black w-full">
 
-                <FaToggleOff></FaToggleOff>
+                {/* <FaToggleOff></FaToggleOff> */}
+                <DarkModeToggle
+                  onChange={setIsDarkMode}
+                  checked={isDarkMode}
+                  size={50}
+                />
 
               </Nav.Link>
 
