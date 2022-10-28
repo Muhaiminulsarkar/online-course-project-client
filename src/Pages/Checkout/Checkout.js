@@ -36,7 +36,7 @@ const Checkout = () => {
 
 
 
-        <Card className='mx-auto mt-5' border="success" style={{ width: '70%' }}>
+        <Card className='mx-auto mt-5' border="success" style={{ width: '30rem' }}>
           <Card.Header className='text-center'>{name}</Card.Header>
           <Card.Body>
             <Card.Text>

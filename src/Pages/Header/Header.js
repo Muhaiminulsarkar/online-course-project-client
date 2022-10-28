@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
-import { FaUserCircle, FaToggleOff } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 import Image from 'react-bootstrap/Image'
 import Button from "react-bootstrap/Button";
 import "./Header.css";
