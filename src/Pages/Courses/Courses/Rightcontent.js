@@ -14,7 +14,7 @@ const Rightcontent = ({ rightside }) => {
         <Card.Body className='course-name'>
           <Card.Title>{name}</Card.Title>
 
-          <Button variant="success"> <Link className='text-light text-decoration-none fw-bold' to={`/courses/${_id}`}> Go Details</Link> </Button>
+          <Button variant="success"> <Link className='text-light text-decoration-none fw-bold' to={`/courses/${_id}`}> Checkout</Link> </Button>
         </Card.Body>
       </Card>
     </div>

@@ -18,8 +18,8 @@ const CourseDetails = () => {
           <p className="fw-bold">Class:{classes}</p>
           <p className="fw-bold">Feature:{feature}</p>
           <p className="fs-3 fw-bold text-success">Price:{price}</p>
-          <Button variant="primary">
-            <Link to={`/checkout/${_id}`}>Get premium access</Link>
+          <Button variant="success">
+            <Link className='text-light text-decoration-none fw-bold' to={`/checkout/${_id}`}>Enroll Now</Link>
           </Button>
         </Card.Body>
       </Card>
