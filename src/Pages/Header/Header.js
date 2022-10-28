@@ -64,7 +64,7 @@ const Header = () => {
                       </Link>
                     </Button>
 
-                    <Button variant="warning" size="sm">
+                    <Button variant="success" size="sm">
                       <Link className="text-black underline px-2 fw-bold" to="/signup">
                         signup
                       </Link>

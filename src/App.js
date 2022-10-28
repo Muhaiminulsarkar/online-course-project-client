@@ -33,13 +33,13 @@ function App() {
         {
           path: "/courses/:id",
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/course-details/${params.id}`),
+            fetch(`https://course-network-server.vercel.app/course-details/${params.id}`),
           element: <CourseDetails></CourseDetails>,
         },
         {
           path: "/checkout/:id",
           loader: ({ params }) =>
-            fetch(`http://localhost:5000/course-details/${params.id}`),
+            fetch(`https://course-network-server.vercel.app/course-details/${params.id}`),
           element: (
             <PrivateRoute>
               <Checkout></Checkout>

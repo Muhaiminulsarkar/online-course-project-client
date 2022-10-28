@@ -10,7 +10,11 @@ const CourseDetails = () => {
     <div className="container mx-auto mt-5">
       <Card>
         <Card.Img height="500px" variant="top" src={img} />
+
         <Card.Body className="course-name">
+          <Button variant="success" className="mb-2">
+            <Link className='text-light text-decoration-none fw-bold w-25 ' to={``}>Download pdf</Link>
+          </Button>
           <Card.Title>Course Title:{name}</Card.Title>
           <Card.Text>details:{description}</Card.Text>
           <p className="fw-bold">Level:{level}</p>
