@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
-import { FaUserCircle, FaToggleOn } from "react-icons/fa";
+import { FaUserCircle, FaToggleOff } from "react-icons/fa";
 import Image from 'react-bootstrap/Image'
 import Button from "react-bootstrap/Button";
 import "./Header.css";
@@ -11,7 +11,6 @@ import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [darkMode, setDarkMode] = useState(false);
 
   const handleLogOut = () => {
     logOut()
@@ -43,7 +42,8 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link className="text-black w-full">
 
-                <FaToggleOn></FaToggleOn>
+                <FaToggleOff></FaToggleOff>
+
               </Nav.Link>
 
             </Nav>
@@ -75,7 +75,7 @@ const Header = () => {
               <Nav.Link eventKey={2} href="">
                 {user?.photoURL ? (
 
-                  <Image className="circleimage" roundedCircle src={user?.photoURL}></Image>
+                  <Image className="circle-image" roundedCircle src={user?.photoURL}></Image>
                 ) : (
                   <FaUserCircle className="fs-5 mt-3"></FaUserCircle>
 

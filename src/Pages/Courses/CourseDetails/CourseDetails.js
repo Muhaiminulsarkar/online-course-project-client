@@ -1,20 +1,26 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Pdf from "react-to-pdf";
+import React from "react";
+
+
 const CourseDetails = () => {
+  const ref = React.createRef();
   const data = useLoaderData();
   const { price, description, level, lecture, classes, name, img, feature, _id } = data;
   console.log(price);
 
   return (
     <div className="container mx-auto mt-5">
-      <Card>
+      <Card ref={ref}>
         <Card.Img height="500px" variant="top" src={img} />
 
         <Card.Body className="course-name">
-          <Button variant="success" className="mb-2">
-            <Link className='text-light text-decoration-none fw-bold w-25 ' to={``}>Download pdf</Link>
-          </Button>
+          <Pdf targetRef={ref} filename="code-example.pdf">
+            {({ toPdf }) => <button className="btn btn-success mb-3" onClick={toPdf}>Download Pdf</button>}
+          </Pdf>
+
           <Card.Title>Course Title:{name}</Card.Title>
           <Card.Text>details:{description}</Card.Text>
           <p className="fw-bold">Level:{level}</p>
