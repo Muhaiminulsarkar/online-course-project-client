@@ -1,4 +1,4 @@
-import React, { useContext,useState } from "react";
+import React, { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -15,7 +15,7 @@ const Header = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => { })
       .catch((error) => console.error(error));
   };
 
@@ -24,7 +24,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
           <Navbar.Brand as={Link} to={"/"}>
-            course<span className="text-primary fw-bold">Hub</span>
+            Course<span className="text-success fw-bold">Network</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -42,10 +42,10 @@ const Header = () => {
                 Blog
               </Nav.Link>
               <Nav.Link className="text-black w-full">
-              
-          <FaToggleOn></FaToggleOn> 
+
+                <FaToggleOn></FaToggleOn>
               </Nav.Link>
-             
+
             </Nav>
 
             <Nav>
@@ -74,7 +74,7 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link eventKey={2} href="">
                 {user?.photoURL ? (
-                  
+
                   <Image className="circleimage" roundedCircle src={user?.photoURL}></Image>
                 ) : (
                   <FaUserCircle className="fs-5 mt-3"></FaUserCircle>
@@ -86,9 +86,9 @@ const Header = () => {
         </Container>
       </Navbar>
     </div>
-    
+
   );
-  
+
 };
 
 export default Header;

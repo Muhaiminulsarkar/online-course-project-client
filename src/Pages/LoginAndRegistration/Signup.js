@@ -11,7 +11,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 const Signup = () => {
     const [error, setError] = useState('');
     const [accepted, setAccepted] = useState(false);
-    const { createUser, updateUserProfile,} = useContext(AuthContext);
+    const { createUser, updateUserProfile, } = useContext(AuthContext);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -49,7 +49,7 @@ const Signup = () => {
             .catch(error => console.log(error));
     }
 
-   
+
     const handleAccepted = event => {
         setAccepted(event.target.checked)
     }
@@ -58,7 +58,7 @@ const Signup = () => {
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
-   
+
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
             .then(result => {
@@ -68,59 +68,59 @@ const Signup = () => {
             .catch(error => console.error(error))
     }
 
-    const handleGithubSignin = () =>{
+    const handleGithubSignin = () => {
         providerLogin(githubProvider)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-        })
-        .catch(error => console.error(error))
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
     }
 
 
     return (
-        <div className='container w-25 mt-5 bg-light px-4 py-2'>
+        <div className='container w-25 mt-5 bg-success px-4 py-2'>
             <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Your Name</Form.Label>
-                <Form.Control name="name" type="text" placeholder="Your Name" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Photo URL</Form.Label>
-                <Form.Control name="photoURL" type="text" placeholder="Phot URL" />
-            </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Your Name</Form.Label>
+                    <Form.Control name="name" type="text" placeholder="Your Name" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Photo URL</Form.Label>
+                    <Form.Control name="photoURL" type="text" placeholder="Phot URL" />
+                </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control name="email" type="email" placeholder="Enter email" required />
-            </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control name="email" type="email" placeholder="Enter email" required />
+                </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control name="password" type="password" placeholder="Password" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check
-                    type="checkbox"
-                    onClick={handleAccepted}
-                    label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
-            </Form.Group>
-            <Button variant="primary" type="submit" disabled={!accepted}>
-                Register
-            </Button>
-            <Form.Text className="text-danger">
-                {error}
-            </Form.Text>
-             <div className='mt-4 text-center'>
-             <Button onClick={handleGoogleSignIn} className='mb-3 px-5 text-center' variant="dark"><FaGoogle></FaGoogle> sign up with Google</Button> <br/>
-             <Button onClick={handleGithubSignin} variant="dark" className='mb-3 px-5 text-center'><FaGithub></FaGithub> sign up with Github</Button> 
-             </div>
-            
-        </Form>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control name="password" type="password" placeholder="Password" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check
+                        type="checkbox"
+                        onClick={handleAccepted}
+                        label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
+                </Form.Group>
+                <Button variant="primary" type="submit" disabled={!accepted}>
+                    Register
+                </Button>
+                <Form.Text className="text-danger">
+                    {error}
+                </Form.Text>
+                <div className='mt-4 text-center'>
+                    <Button onClick={handleGoogleSignIn} className='mb-3 px-5 text-center' variant="dark"><FaGoogle></FaGoogle> sign up with Google</Button> <br />
+                    <Button onClick={handleGithubSignin} variant="dark" className='mb-3 px-5 text-center'><FaGithub></FaGithub> sign up with Github</Button>
+                </div>
+
+            </Form>
         </div>
     );
 
-    
+
 };
 
 export default Signup;

@@ -38,22 +38,24 @@ const Login = () => {
   };
 
   return (
-    <div className="container w-25 mt-5 bg-light px-4 py-3 ">
+    <div className="container w-25 mt-5 bg-success px-4 py-3 rounded">
       <Form onSubmit={handleSubmit}>
-        <h2 className="mb-2 text-primary">Log in</h2>
+        <h2 className="mb-2 text-light text-center">Log in</h2>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label className="text-light fw-bold">Email address</Form.Label>
           <Form.Control name="email" type="email" placeholder="Enter email" required />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="text-light fw-bold">Password</Form.Label>
           <Form.Control name="password" type="password" placeholder="Password" required />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Login
-        </Button>
+        <div className="text-center">
+          <Button className="fw-bold" variant="light" type="submit">
+            Login
+          </Button>
+        </div>
         <Form.Text className="text-danger">{error}</Form.Text>
       </Form>
     </div>
