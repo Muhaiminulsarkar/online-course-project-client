@@ -3,7 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 const Blog = () => {
   return (
     <div className="container w-75 mt-5">
-      <h1 className="text-center text-primary">some interview questions</h1>
+      <h1 className="text-center text-success mb-4">Some Interview Questions</h1>
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>what is cors?</Accordion.Header>
@@ -50,7 +50,7 @@ const Blog = () => {
       </Accordion>
     </div>
   );
-  
+
 };
 
 export default Blog;

@@ -23,17 +23,17 @@ const Header = () => {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
-          <Navbar.Brand as={Link} to={"/"}>
+          <Navbar.Brand className="fs-3" as={Link} to={"/"}>
             Course<span className="text-success fw-bold">Network</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto fw-bold">
+            <Nav className="mx-auto fw-bold fs-5">
               <Nav.Link className="text-black" as={Link} to={"/"}>
                 Home
               </Nav.Link>
               <Nav.Link className="text-black" as={Link} to={"/courses"}>
-                courses
+                Courses
               </Nav.Link>
               <Nav.Link className="text-black" as={Link} to={"/faq"}>
                 Faq
