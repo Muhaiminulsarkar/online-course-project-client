@@ -109,7 +109,7 @@ const Signup = () => {
                     Register
                 </Button>
                 <Form.Text className="text-danger">
-                    {error}
+
                 </Form.Text>
                 <div className='mt-4 text-center'>
                     <Button onClick={handleGoogleSignIn} className='mb-3 px-5 text-center' variant="dark"><FaGoogle></FaGoogle> sign up with Google</Button> <br />

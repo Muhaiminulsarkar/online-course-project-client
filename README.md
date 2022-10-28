@@ -1,3 +1,13 @@
+#Website Name: Course Network
+
+#Website Link:https://course-network.web.app/
+
+#in this project,i use bootstrap framework for designing.
+#also i used react framework.
+#firebase authentication
+#React router dom
+#Auth context 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
